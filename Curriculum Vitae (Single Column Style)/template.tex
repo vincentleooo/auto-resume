@@ -3,7 +3,7 @@
 \usepackage{geometry}
 \geometry{$geometry$}
 \usepackage{wallpaper}
-
+\usepackage[hidelinks]{hyperref}
 \usepackage{paracol}
 
 % Do not indent paragraphs
@@ -17,18 +17,20 @@
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt} % Prevent top line from appearing
-\rfoot{Page \thepage \hspace{1pt} of \pageref{LastPage}} % Format of the page numbers
+% \rfoot{Page \thepage \hspace{1pt} of \pageref{LastPage}} % Format of the page numbers
+\rfoot{} % Format of the page numbers
 
 \usepackage{multicol}
-\usepackage{ragged2e}
+% \usepackage{ragged2e}
 
 
 
 % TYPOGRAPHY
 %--------------------------------
 \usepackage{fontspec} 
-%\usepackage{xunicode}
-%\usepackage{xltxtra}
+\usepackage{fontawesome5}
+\usepackage{xunicode}
+\usepackage{xltxtra}
 % converts LaTeX specials (quotes, dashes etc.) to Unicode
 $if(reducetracking)$
 \defaultfontfeatures{LetterSpace=-4}
@@ -119,21 +121,23 @@ $endif$
 	}{\end{itemize}%
 }
 
-\newcommand{\heading}[1]{{\defaultfontfeatures{LetterSpace=0}\setmainfont{Futura} \textcolor{black}{\dunderline[-3pt]{2pt}{\textbf{#1}}}}}
-\newcommand{\itemheading}[1]{{\defaultfontfeatures{LetterSpace=-1}\setmainfont{Futura} \textbf{#1}}}
-\newcommand{\subheading}[1]{{\defaultfontfeatures{LetterSpace=-3}\setmainfont{Futura} \textit{#1}}}
+\newcommand{\heading}[1]{{\defaultfontfeatures{LetterSpace=0}\setmainfont{Futura} \textcolor{black} {\dunderline[-3pt]{2pt}{\small \textbf{#1}}}}}
+\newcommand{\itemheading}[1]{{\defaultfontfeatures{LetterSpace=-2}\setmainfont{Futura} \small \textbf{#1}}}
+\newcommand{\subheading}[1]{{\defaultfontfeatures{LetterSpace=-3}\setmainfont{Futura} \small \textit{#1}}}
 \newcommand{\monthyear}[1]{{\defaultfontfeatures{LetterSpace=-3}\setmainfont{Futura} \small #1}}
+\newcommand{\motto}[1]{{\defaultfontfeatures{LetterSpace=-3}\setmainfont{Futura} \footnotesize #1}}
+
 
 \begin{document}
 	\vspace*{$headheight$}
 	\ThisCenterWallPaper{1}{cv-head-2.pdf}
-	\columnratio{0.75}
+	\columnratio{$columnratio$}
 
 	$if(about)$
 	\heading{ABOUT}
 	\medbreak
 	\vspace{1pt}
-	{$if(small)$\small$endif$ $about$}
+	{$if(small)$\small $endif$$about$}
 	
 	\vspace{0.2in}
 	$endif$
@@ -144,10 +148,10 @@ $endif$
 	\vspace{2pt}
 	\begin{myitemize}[topsep=0ex, labelsep=0.1in]
 		$for(education)$
-		\begin{paracol}{2}\myitem\itemheading{$education.institute$}\\\subheading{$education.degree$}\switchcolumn{\vspace*{5pt}\small\monthyear{SINGAPORE}\\\monthyear{$education.year$}}\end{paracol}
+		\begin{paracol}{2}\myitem\itemheading{$education.institute$}\\\subheading{$education.degree$}\switchcolumn{\vspace*{5pt}\small\monthyear{Singapore}\\\monthyear{$education.year$}}\end{paracol}
 		\begin{itemize}[itemsep=-0.4ex, topsep=-0.4ex]
 			$for(education.description)$
-			\item {$if(small)$\small$endif$ $education.description$}
+			\item {$if(small)$\small $endif$$education.description$}
 			$endfor$
 		\end{itemize}
 		$endfor$
@@ -157,15 +161,15 @@ $endif$
 	$endif$
 	
 	$if(experience)$
-	\heading{PROFESSIONAL EXPERIENCE}
+	\heading{EXPERIENCE}
 	\smallbreak
 	\vspace{2pt}
 	\begin{myitemize}[topsep=0ex, labelsep=0.1in]
 		$for(experience)$
-		\begin{paracol}{2}\myitem\itemheading{$experience.position$}\\\subheading{$experience.company$}\switchcolumn{\vspace*{5pt}\monthyear{SINGAPORE}\\\monthyear{$experience.year$}}\end{paracol}
+		\begin{paracol}{2}\myitem\itemheading{$experience.company$}\\\subheading{$experience.position$}\switchcolumn{\vspace*{5pt}\monthyear{Singapore}\\\monthyear{$experience.year$}}\end{paracol}
 		\begin{itemize}[itemsep=-0.4ex, topsep=-0.4ex]
 			$for(experience.description)$
-			\item {$if(small)$\small$endif$ $experience.description$}
+			\item {$if(small)$\small $endif$$experience.description$}
 			$endfor$
 		\end{itemize}
 		$endfor$
@@ -180,10 +184,10 @@ $endif$
 	\vspace{2pt}
 	\begin{myitemize}[topsep=0pt, labelsep=0.1in]
 		$for(projects)$
-		\begin{paracol}{2}\myitem\itemheading{$projects.name$}\\\subheading{$projects.company$}\switchcolumn{\item[]\monthyear{SINGAPORE}\\\monthyear{$projects.year$}}\end{paracol}
+		\begin{paracol}{2}\myitem\itemheading{$projects.name$}\\\subheading{$projects.company$}\switchcolumn{\item[]\monthyear{Singapore}\\\monthyear{$projects.year$}}\end{paracol}
 		\begin{itemize}[itemsep=-0.4ex, topsep=-0.4ex]
 			$for(projects.description)$
-			\item {$if(small)$\small$endif$ $projects.description$}
+			\item {$if(small)$\small $endif$$projects.description$}
 			$endfor$
 		\end{itemize}
 		$endfor$
@@ -198,10 +202,10 @@ $endif$
 	\vspace{2pt}
 	\begin{myitemize}[topsep=0pt, labelsep=0.1in]
 		$for(cca)$
-		\begin{paracol}{2}\myitem\itemheading{$cca.position$}\\\subheading{$cca.name$}\switchcolumn{\item[]\monthyear{SINGAPORE}\\\monthyear{$cca.year$}}\end{paracol}
+		\begin{paracol}{2}\myitem\itemheading{$cca.name$}\\\subheading{$cca.position$}\switchcolumn{\item[]\monthyear{Singapore}\\\monthyear{$cca.year$}}\end{paracol}
 		\begin{itemize}[itemsep=-0.4ex, topsep=-0.4ex]
 			$for(cca.description)$
-			\item {$if(small)$\small$endif$ $cca.description$}
+			\item {$if(small)$\small $endif$$cca.description$}
 			$endfor$
 		\end{itemize}
 		$endfor$
@@ -210,10 +214,8 @@ $endif$
 	\vspace{0.16in}
 	$endif$
 
-	\columnratio{0.43}
-	\begin{paracol}{2}
 		$if(skills)$
-		\heading{SKILLS}
+		\heading{SKILLS \& TOOLS}
 		\medbreak
 		\vspace*{1pt}
 		\begin{skills}
@@ -221,30 +223,17 @@ $endif$
 			\item {$if(small)$\small $endif$$skills$}
 			$endfor$
 		\end{skills}
+		$endif$
 
 		\vspace*{0.2in}
-		$endif$
-		$if(tools)$
-		\heading{TOOLS}
-		\medbreak
-		\vspace*{1pt}
-		\begin{skills}[itemsep=-0.4ex]
-			$for(tools)$
-			\item {$if(small)$\small $endif$$tools$}
-			$endfor$
-		\end{skills}
-		$endif$
-
-		\switchcolumn
 
 		$if(others)$
-		\heading{OTHER EXPERIENCE}
+		\heading{ADDITIONAL INFORMATION}
 		\begin{itemize}[itemsep=-0.4ex]
 			$for(others)$
 			\item {$if(small)$\small $endif$$others$}
 			$endfor$
 		\end{itemize}
 		$endif$
-	\end{paracol}
 	
 \end{document}

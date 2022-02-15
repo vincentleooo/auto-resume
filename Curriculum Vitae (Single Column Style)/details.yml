@@ -6,8 +6,8 @@ reducetracking: true
 small: true
 fontsize: 9pt
 lang: en-GB
-geometry: a4paper, margin=0.75in
-columnratio: 0.82
+geometry: a4paper, margin=1in
+columnratio: 0.77
 headheight: 0.9099in
 # headheight: 1.0552in # default value
 
@@ -23,18 +23,18 @@ education:
       - Focusing on Artificial Intelligence-related courses and applications.
       - Teaching assistant for 10.020 Data Driven World (Fall 2021) and 60.002 AI Applications in Design (Spring 2022).
       - Awarded with the SUTD Undergraduate Merit Scholarship.
-  # - year: FEB 2017 to December 2018
-  #   institute: ANGLO-CHINESE JUNIOR COLLEGE
-  #   degree: GCE Advanced Level
-  #   description:
-  #     - Obtained two distinctions.
-  #     - ASEAN Scholarship holder.
-  # - year: January 2015 to December 2016
-  #   institute: ANGLO-CHINESE SCHOOL (INDEPENDENT)
-  #   degree: GCE Ordinary Level
-  #   description:
-  #     - Obtained nine distinctions.
-  #     - ASEAN Scholarship holder.
+  - year: Feb 2017 -- Dec 2018
+    institute: Anglo-Chinese Junior College
+    degree: GCE Advanced Level
+    description:
+      - Obtained two distinctions.
+      - ASEAN Scholarship holder.
+  - year: Jan 2015 -- Dec 2016
+    institute: Anglo-Chinese School (Independent)
+    degree: GCE Ordinary Level
+    description:
+      - Obtained nine distinctions.
+      - ASEAN Scholarship holder.
 
 experience:
   - year: May 2021 -- Sep 2021
@@ -43,20 +43,20 @@ experience:
     description:
       - Wrangled and examined large user behavioural datasets using the Apache Hive ecosystem, Python, and SQL.
       - Ideated rules that reduce instances of fraud, tested and analysed impact thereof with three other departments.
-  # - year: May 2020 to Sep 2020
-  #   company: SUTD DMAND CENTRE
-  #   position: Composites Research Intern
-  #   description:
-  #     - Optimised composites manufacturing processes and writing ANSYS scripts to automate software simulations, laying the groundwork for future projects.
-  #     - Led and collaborated with 3 researchers and 2 other interns in various ad-hoc projects related to the research.
-  #     - Led equipment purchasing decisions using technical expertise and knowledge, saving about 30-40% of the research’s budget.
+  - year: May 2020 to Sep 2020
+    company: SUTD DManD Centre
+    position: Composites Research Intern
+    description:
+      - Optimised composites manufacturing processes and writing ANSYS scripts to automate software simulations, laying the groundwork for future projects.
+      - Led and collaborated with 3 researchers and 2 other interns in various ad-hoc projects related to the research.
+      - Led equipment purchasing decisions using technical expertise and knowledge, saving about 30-40% of the research’s budget.
 
 projects:
-  # - year: January 2022 -- Aug 2022
-  #   name: GAIT (OR POSE) RECOGNITION MODEL AND ANALYTICS
-  #   company: Klass Engineering Pte Ltd
-  #   description:
-  #     - To train a model to correctly identify and track a moving person in the real world by their unique gait.
+  - year: Jan 2022 -- Aug 2022
+    name: Gait (or Pose) Recognition Model and Analytics.
+    company: Klass Engineering Pte Ltd
+    description:
+      - Training a model to correctly identify and track a moving person in the real world by their unique gait.
   - year: Nov 2021 -- Dec 2021
     name: \href{https://github.com/vincentleooo/analytics-edge-data-comp}{The Analytics Edge Data Competition}
     company: Singapore University of Technology and Design
@@ -81,25 +81,25 @@ projects:
     description:
       - Directed the team of three to win third place in the data science challenge among around 135 participants.
       - Modelled word associations and sentiments on food surplus consumption from Twitter and Instagram posts in the past five years to consult Treatsure on persuading more people to consume surplus food.
-  # - year: Mar 2021 -- May 2021
-  #   name: "Count On It: A Financial Literacy Game"
-  #   company: SUTD
-  #   description:
-  #     - Web app deliverable for the Engineering Systems Architecture course.
-  #     - Led the technical plannings for the game architecture and the coding process.
+  - year: Mar 2021 -- May 2021
+    name: "Count On It: A Financial Literacy Game"
+    company: SUTD
+    description:
+      - Web app deliverable for the Engineering Systems Architecture course.
+      - Led the technical plannings for the game architecture and the coding process.
   - year: Mar 2021 -- May 2021
     name: Optimisation of Pre-Surgery Assessment Appointment Slots
     company: Singapore General Hospital Pre-Admission Centre
     description:
       - Partnered with client to gather and clean the appointment data over the past three years to form statistical inferences in R.
       - Collaborated with team of four to implement the M/M/s on Excel to optimise manpower, queue time, and working hours.
-  # - year: Sep 2020 to December 2020
-  #   name: Analysis of Carsharing Usage Pattern and Utilisation
-  #   company: Car Club Pte Ltd
-  #   description:
-  #     - Led a team to analyse the effects of COVID-19 on carsharing usage using various tools such as R, SQL, Python and GIS.
-  #     - Wrote Python scripts to automate the sifting and analysis of four months of customer data provided in Excel format.
-  #     - Consulted the industry partner (Car Club) on possible measures on adapting to the new behaviours found due to COVID-19.
+  - year: Sep 2020 to Dec 2020
+    name: Analysis of Carsharing Usage Pattern and Utilisation
+    company: Car Club Pte Ltd
+    description:
+      - Guided a team of four to analyse the effects of COVID-19 on carsharing usage using various tools such as R, SQL, Python and GIS.
+      - Wrote Python scripts to automate the sifting and analysis of four months of customer data provided in Excel format.
+      - Consulted the industry partner (Car Club) on possible measures on adapting to the new behaviours found due to COVID-19.
   
 cca:
   - year: Feb 2021 -- Feb 2022
@@ -123,8 +123,8 @@ skills:
   - Machine Learning
   - Neural Networks
   - Optimisation
-  - Simulations
-  - Research\hfill
+  - Simulations\hfill
+  - Research
   - Python
   - R
   - JavaScript
@@ -134,7 +134,7 @@ skills:
   - \LaTeX
   - Adobe Suite
   - Fusion 360
-  - English (native)
+  - English (native)\hfill
   - Bahasa Indonesia (native)
 
 others:
