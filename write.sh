@@ -1,0 +1,1 @@
+pandoc details.yml -o output.tex --template=template.tex && latexmk -xelatex output.tex
